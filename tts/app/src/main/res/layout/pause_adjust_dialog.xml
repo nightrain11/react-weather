@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="144dp"
+    android:layout_gravity="bottom"
+    android:background="@color/controller_menu_color">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/close" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="停顿调节"
+        android:textSize="@dimen/dialog_title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_pause_adjust_button_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="无停顿"
+            android:textColor="@color/controller_text_color"
+            android:textColorHighlight="@color/white" />
+
+        <com.example.tts.View.widget.CustomRadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_pause_adjust_button_background"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_pause_adjust_image_short"
+            android:gravity="center"
+            android:text="短"
+            android:textColor="@color/controller_text_color"
+            android:textColorHighlight="@color/white" />
+
+        <com.example.tts.View.widget.CustomRadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_pause_adjust_button_background"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_pause_adjust_image_middle"
+            android:gravity="center"
+            android:text="中"
+            android:textColor="@color/controller_text_color"
+            android:textColorHighlight="@color/white" />
+
+        <com.example.tts.View.widget.CustomRadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_pause_adjust_button_background"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_pause_adjust_image_long"
+            android:gravity="center"
+            android:text="长"
+            android:textColor="@color/controller_text_color"
+            android:textColorHighlight="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_pause_adjust_button_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="默认"
+            android:textColor="@color/controller_text_color"
+            android:textColorHighlight="@color/white" />
+
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="202dp"
+    android:layout_gravity="bottom"
+    android:background="@color/controller_menu_color">
+
+    <EditText
+        android:id="@+id/customerSilenceInput"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/selector_polyphonic_button_style"
+        android:ems="5"
+        android:inputType="numberDecimal"
+        android:paddingLeft="44dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/silenceInsertCloseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/close" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insertSilenceTitle">
+
+        <com.example.tts.View.widget.CustomRadioButton
+            android:id="@+id/btn_200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_pause_adjust_button_background"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_insert_pause_image"
+            android:gravity="center"
+            android:text="200ms"
+            android:textColor="@color/controller_text_color"
+            android:textColorHighlight="@color/white"
+            android:textSize="13sp" />
+
+        <com.example.tts.View.widget.CustomRadioButton
+            android:id="@+id/btn_400"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_pause_adjust_button_background"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_insert_pause_image"
+            android:gravity="center"
+            android:text="400ms"
+            android:textColor="@color/controller_text_color"
+            android:textColorHighlight="@color/white"
+            android:textSize="13sp" />
+
+        <com.example.tts.View.widget.CustomRadioButton
+            android:id="@+id/btn_600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_pause_adjust_button_background"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_insert_pause_image"
+            android:gravity="center"
+            android:text="600ms"
+            android:textColor="@color/controller_text_color"
+            android:textColorHighlight="@color/white"
+            android:textSize="13sp" />
+
+        <com.example.tts.View.widget.CustomRadioButton
+            android:id="@+id/btn_800"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_pause_adjust_button_background"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_insert_pause_image"
+            android:gravity="center"
+            android:text="800ms"
+            android:textColor="@color/controller_text_color"
+            android:textColorHighlight="@color/white"
+            android:textSize="13sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义："
+        android:textColor="#333333"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <TextView
+        android:id="@+id/insertSilenceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="插入静音"
+        android:textColor="#515B75"
+        android:textSize="@dimen/dialog_title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="ms"
+        android:textColor="#A9C8E6"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/customerSilenceInput"
+        app:layout_constraintStart_toStartOf="@+id/customerSilenceInput"
+        app:layout_constraintTop_toTopOf="@+id/customerSilenceInput" />
+</androidx.constraintlayout.widget.ConstraintLayout>
